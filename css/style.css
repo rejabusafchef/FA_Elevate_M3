@@ -1,0 +1,196 @@
+.titleColor {
+    color: rgb(156, 220, 254);
+}
+
+.signUpSignInColor {
+    color: rgb(255, 213, 0);
+}
+
+.titleFontXsm {
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.titleFontSm {
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.titleFontMd {
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.titleFontLg {
+    font-size: 22px;
+    margin-right: 20px;
+}
+
+.lgLogoDisplay {
+    width: 90%;
+    height: auto;
+}
+
+.smLogoDisplay {
+    width: 55%;
+    height: auto;
+}
+
+.miniLogoDisplay {
+    margin-left: 2px;
+    min-width: 36px;
+    max-width: 36px;
+    height: auto;
+}
+
+@media all and (max-width: 767px) {
+    .topMargin {
+        margin-top: 5px;
+    }
+
+    .bottomMargin {
+        margin-bottom: 3px;
+    }
+
+    .navItemAnimation li {
+        animation: fadeIn 600ms ease-in-out forwards;
+        opacity: 0;
+    }
+
+    .navItemAnimation li:nth-child(1) {
+        animation-delay: 50ms;
+    }
+
+    .navItemAnimation li:nth-child(2) {
+        animation-delay: 80ms;
+    }
+
+    .navItemAnimation li:nth-child(3) {
+        animation-delay: 110ms;
+    }
+
+    .navItemAnimation li:nth-child(4) {
+        animation-delay: 140ms;
+    }
+
+    .navItemAnimation li:nth-child(5) {
+        animation-delay: 170ms;
+    }
+
+    .navItemAnimation li:nth-child(6) {
+        animation-delay: 200ms;
+    }
+
+    .navItemAnimation li:nth-child(7) {
+        animation-delay: 230ms;
+    }
+}
+
+/* The following animation is only activated in dropdown mode
+ (less than 768px, md breakpoint) using the above media query */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.navItemAnimation li:nth-child(1) {
+    animation-delay: 50ms;
+}
+
+.navItemAnimation li:nth-child(2) {
+    animation-delay: 80ms;
+}
+
+.navItemAnimation li:nth-child(3) {
+    animation-delay: 110ms;
+}
+
+.navItemAnimation li:nth-child(4) {
+    animation-delay: 140ms;
+}
+
+.navItemAnimation li:nth-child(5) {
+    animation-delay: 170ms;
+}
+
+.readMoreButton {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-bottom: 10px;
+}
+
+.hoverColor:hover {
+    color: rgb(255, 255, 255, 0.5);
+}
+
+.navBarProps {
+    padding-left: 11px;
+    padding-bottom: 1px;
+}
+
+.navButtonSize {
+    padding: 3px;
+    margin-left: 1px;
+}
+
+.cardAnchorTag {
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+
+/* Change color of nav-item(s) to white and remove the underline styled by anchor tag */
+.navAnchorTag {
+    color: white;
+    text-decoration: none;
+}
+
+/* Change color of active nav-item to greyish */
+.collapse>ul>li>a>div.active>p {
+    color: rgb(255, 255, 255, 0.5);
+}
+
+.blankDivForNavbar {
+    min-height: 30px;
+    min-width: 100px;
+}
+
+.cardEffect:hover {
+    color: rgba(0, 0, 0, 0.50);
+}
+
+#username-error {
+    color: brown;
+    font-size: medium;
+}
+
+#email-error {
+    color: brown;
+    font-size: medium;
+}
+
+#password-error {
+    color: brown;
+    font-size: medium;
+}
+
+#password-repeat-error {
+    color: brown;
+    font-size: medium;
+}

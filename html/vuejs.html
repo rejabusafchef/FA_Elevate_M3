@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Top Five Frontend Frameworks</title>
+    <link rel="icon" type="image/svg+xml" href="../images/home-logo.svg">
+    <!-- Custom bootstrap compiled by adding new Sass maps as follows: -->
+    <!-- Sass maps added: 
+        $grid-breakpoints (
+            xsm: 350px -> Added after xs and before other breakpoints
+        )
+        $container-max-widths (
+            xsm: 328px -> Added before other breakpoints
+        )
+     -->
+    <!-- This is done to have responsiveness in devices such as low resolution phones (less than xsm breakpoint) -->
+    <link href="../css/custom_bootstrap.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header data-bs-theme="dark">
+        <!-- Bootstrap navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid navBarProps">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../images/home-logo.svg" alt="Home Logo" class="img-fluid miniLogoDisplay">
+                </a>
+                <!-- Different title font sizes for different breakpoints  -->
+                <!-- Title not displayed for viewport width less than xsm breakpoint -->
+                <a class="navbar-brand titleFontLg titleColor d-none d-lg-inline me-auto" href="../index.html">Top Five
+                    Frontend Frameworks</a>
+                <a class="navbar-brand titleFontMd titleColor d-none d-md-inline d-lg-none me-auto"
+                    href="../index.html">Top Five Frontend Frameworks</a>
+                <a class="navbar-brand titleFontSm titleColor d-none d-sm-inline d-md-none me-auto"
+                    href="../index.html">Top Five Frontend Frameworks</a>
+                <a class="navbar-brand titleFontXsm titleColor d-none d-xsm-inline d-sm-none me-auto"
+                    href="../index.html">Top Five Frontend Frameworks</a>
+                <button class="navbar-toggler navButtonSize" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <!-- nav-item(s) margin at the start instead of end -->
+                    <!-- li(s) appears one by one from top to bottom animated and all li(s) move from -15px to 0px downwards -->
+                    <ul class="navbar-nav ms-auto navItemAnimation">
+                        <li class="nav-item">
+                            <a class="container-fluid navAnchorTag hoverColor p-0" href="../html/angular.html">
+                                <div class="d-flex align-items-center topMargin">
+                                    <img src="../images/angular-logo.svg" class="img-fluid miniLogoDisplay d-xsm-inline d-md-none" alt="Angular Logo">
+                                    <p class="m-2">Angular</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="container-fluid navAnchorTag hoverColor p-0" href="../html/emberjs.html">
+                                <div class="d-flex align-items-center">
+                                    <img src="../images/emberjs-logo.svg" class="img-fluid miniLogoDisplay d-xsm-inline d-md-none" alt="EmberJs Logo">
+                                    <p class="m-2">EmberJs</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="container-fluid navAnchorTag hoverColor p-0" href="../html/jquery.html">
+                                <div class="d-flex align-items-center">
+                                    <img src="../images/jquery-logo.svg" class="img-fluid miniLogoDisplay d-xsm-inline d-md-none" alt="jQuery Logo">
+                                    <p class="m-2">jQuery</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="container-fluid navAnchorTag hoverColor p-0" href="../html/react.html">
+                                <div class="d-flex align-items-center">
+                                    <img src="../images/react-logo.svg" class="img-fluid miniLogoDisplay d-xsm-inline d-md-none" alt="React Logo">
+                                    <p class="m-2">React</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="container-fluid navAnchorTag hoverColor p-0" href="../html/vuejs.html">
+                                <div class="d-flex align-items-center bottomMargin active">
+                                    <img src="../images/vuejs-logo.svg" class="img-fluid miniLogoDisplay d-xsm-inline d-md-none" alt="VueJs Logo">
+                                    <p class="m-2">VueJs</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="container-fluid navAnchorTag hoverColor p-0" href="../html/signup.html">
+                                <div class="d-flex align-items-center bottomMargin">
+                                    <p class="m-2 signUpSignInColor">Sign up</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="sign container-fluid navAnchorTag hoverColor p-0" href="../html/signin.html">
+                                <div class="d-flex align-items-center bottomMargin">
+                                    <p class="m-2 signUpSignInColor">Sign in</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <br>
+        <br>
+        <div class="container-fluid mt-5">
+            <div class="row">
+                <!-- Variable coloumn ratio for different widths of viewport -->
+                <div class="col-lg-3 col-md-4 col-sm-12 p-2">
+                    <!-- Logo size lg (inline element) for viewport width greater than md breakpoint -->
+                    <!-- Logo size sm (block element and center) for viewport width less than md breakpoint -->
+                    <img src="../images/vuejs-logo.svg" alt="VueJs Logo"
+                        class="img-fluid lgLogoDisplay d-none d-md-inline mt-4 ms-3">
+                    <img src="../images/vuejs-logo.svg" alt="VueJs Logo"
+                        class="img-fluid smLogoDisplay d-block d-md-none mx-auto">
+                </div>
+                <!-- Variable coloumn ratio for different widths of viewport -->
+                <div class="col-lg-9 col-md-8 col-sm-12 mt-4 lead">
+                    <h2 class="display-6 fw-bold">VueJs</h2>
+                    <br>
+                    The developers of VueJs have combined the existing Front-end Frameworks’ best features to deploy a
+                    simple and straightforward framework. Firstly, it is not complex like Angular, which makes it easy
+                    to learn and use. Secondly, it is much smaller in size and similar to Angular, offers two-way
+                    binding, Visual DOM, and component-based programming. VueJs is a framework that allows you to build
+                    both dynamic and small web applications with ease. However, despite being versatile, it is not yet
+                    popular among big-scale companies. This is because most large-scale companies still trust Angular
+                    for enterprise-based web applications. Some of the companies that use VueJs are Alibaba, 9gag, and
+                    Xiaomi.
+                    <br>
+                    <br>
+                    <h4 class="fw-bold">Advantages</h4>
+                    Availability of detailed documentation for learners. Supports the development of both complex
+                    dynamic applications and simpler smaller applications. The syntax of this framework is very simple
+                    and thus easier to work with. Presence of a virtual DOM.
+                    <br>
+                    <br>
+                    <h4 class="fw-bold">Limitations</h4>
+                    Vue, being in high demand in China, has many of its documentation built-in Chinese, which creates a
+                    language barrier for people accessing these documents outside of China. VueJs is still in its
+                    growing stages and thus does not have a large community. VueJs provides a wide range of features,
+                    but it’s not as big as React or Angular.
+                    <br>
+                    <br>
+                    <h4 class="fw-bold">Applications</h4>
+                    VueJs is suggested to be used for projects that need greater flexibility. You can design everything
+                    from scratch and therefore allows designing dynamic applications with more ease.
+                    <br>
+                    <br>
+                    <h4 class="fw-bold">When not to use</h4>
+                    Despite having a wide range of features, VueJs is still not successful in creating stable
+                    components. Another reason why you wouldn’t want to opt for VueJs is if you’re looking for a
+                    community where you can seek help if you face any hurdles.
+                </div>
+            </div>
+        </div>
+        <hr>
+        <footer class="container-fluid">
+            <p class="float-end"><a href="#" class="btn btn-dark rounded-lg">Back to top</a></p>
+            <p>&copy; 2023–2023 Top Five Frontend Frameworks, Inc.</p>
+        </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

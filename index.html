@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Top Five Frontend Frameworks</title>
+    <link rel="icon" type="image/svg+xml" href="images/home-logo.svg">
+    <!-- Custom bootstrap compiled after adding new Sass maps as follows: -->
+    <!-- Sass maps added: 
+        $grid-breakpoints (
+            xsm: 350px -> Added after xs and before other breakpoints
+        )
+        $container-max-widths (
+            xsm: 328px -> Added before other breakpoints
+        )
+     -->
+    <!-- This is done to have responsiveness in devices such as low resolution phones (less than xsm breakpoint) -->
+    <link href="css/custom_bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header data-bs-theme="dark">
+        <!-- Bootstrap navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid navBarProps">
+                <a class="navbar-brand" href="#">
+                    <img src="images/home-logo.svg" alt="Home Logo" class="img-fluid miniLogoDisplay">
+                </a>
+                <!-- Different title font sizes for different breakpoints  -->
+                <!-- Title not displayed for viewport width less than xsm breakpoint -->
+                <a class="navbar-brand titleFontLg titleColor d-none d-lg-inline me-auto" href="#">Top Five Frontend
+                    Frameworks</a>
+                <a class="navbar-brand titleFontMd titleColor d-none d-md-inline d-lg-none me-auto" href="#">Top Five
+                    Frontend Frameworks</a>
+                <a class="navbar-brand titleFontSm titleColor d-none d-sm-inline d-md-none me-auto" href="#">Top Five
+                    Frontend Frameworks</a>
+                <a class="navbar-brand titleFontXsm titleColor d-none d-xsm-inline d-sm-none me-auto" href="#">Top Five
+                    Frontend Frameworks</a>
+                <button class="navbar-toggler navButtonSize" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse mx-0 px-0" id="navbarCollapse">
+                    <!-- nav-item(s) margin at the start instead of end -->
+                    <!-- li(s) appears one by one from top to bottom animated and all li(s) move from -15px to 0px downwards -->
+                    <ul class="navbar-nav ms-auto navItemAnimation">
+                        <li class="nav-item">
+                            <a class="container-fluid navAnchorTag hoverColor p-0" href="html/angular.html">
+                                <div class="d-flex align-items-center topMargin">
+                                    <img src="images/angular-logo.svg" class="img-fluid miniLogoDisplay d-xsm-inline d-md-none" alt="Angular Logo">
+                                    <p class="m-2">Angular</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="container-fluid navAnchorTag hoverColor p-0" href="html/emberjs.html">
+                                <div class="d-flex align-items-center">
+                                    <img src="images/emberjs-logo.svg" class="img-fluid miniLogoDisplay d-xsm-inline d-md-none" alt="EmberJs Logo">
+                                    <p class="m-2">EmberJs</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="container-fluid navAnchorTag hoverColor p-0" href="html/jquery.html">
+                                <div class="d-flex align-items-center">
+                                    <img src="images/jquery-logo.svg" class="img-fluid miniLogoDisplay d-xsm-inline d-md-none" alt="jQuery Logo">
+                                    <p class="m-2">jQuery</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="container-fluid navAnchorTag hoverColor p-0" href="html/react.html">
+                                <div class="d-flex align-items-center">
+                                    <img src="images/react-logo.svg" class="img-fluid miniLogoDisplay d-xsm-inline d-md-none" alt="React Logo">
+                                    <p class="m-2">React</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="container-fluid navAnchorTag hoverColor p-0" href="html/vuejs.html">
+                                <div class="d-flex align-items-center bottomMargin">
+                                    <img src="images/vuejs-logo.svg" class="img-fluid miniLogoDisplay d-xsm-inline d-md-none" alt="VueJs Logo">
+                                    <p class="m-2">VueJs</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="container-fluid navAnchorTag hoverColor p-0" href="html/signup.html">
+                                <div class="d-flex align-items-center bottomMargin">
+                                    <p class="m-2 signUpSignInColor">Sign up</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="sign container-fluid navAnchorTag hoverColor p-0" href="html/signin.html">
+                                <div class="d-flex align-items-center bottomMargin">
+                                    <p class="m-2 signUpSignInColor">Sign in</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <br>
+        <br>
+        <div class="container-fluid mt-5">
+            <div class="row">
+                <!-- Variable coloumn ratio for different widths of viewport -->
+                <div class="col-lg-3 col-md-4 col-sm-12 p-3">
+                    <a href="#cards">
+                        <!-- Logo size lg (inline element) for viewport width greater than md breakpoint -->
+                        <!-- Logo size sm (block element and center) for viewport width less than md breakpoint -->
+                        <img src="images/home-logo.svg" class="img-fluid lgLogoDisplay d-none d-md-inline mt-4 ms-3"
+                            alt="Home Logo">
+                        <img src="images/home-logo.svg" class="img-fluid smLogoDisplay d-block d-md-none mx-auto"
+                            alt="Home Logo">
+                    </a>
+                </div>
+                <!-- Variable coloumn ratio for different viewport width breakpoints -->
+                <div class="col-lg-9 col-md-8 col-sm-12 mt-4 lead">
+                    <h2 class="display-6 fw-bold">Frontend Frameworks</h2>
+                    <br>
+                    Front-end web development is the process of transforming the data to a graphical interface, through
+                    the usage of CSS, HTML, and JavaScript so that the users can observe and network with that data.
+                    While popular backend frameworks like Django and RoR help in developing sound logic and
+                    functionality, frontend frameworks like Vue and React help in developing user accessibility. There
+                    are numerous platforms and development tools like Joomla, WordPress, and Drupal that can be utilized
+                    to build the frontend of the website.Understanding which tools are the best fit for precise tasks
+                    marks the dissimilarity between a well-designed scalable site and developing a hacked site. The
+                    front end developers consider these points while employing accessible techniques and tools to reach
+                    the end.With ongoing development for mobile devices, such as tablets and smartphones, the designers
+                    require that the site functions correctly in the browsers on all devices. This can be quickly done
+                    by producing a receptive web design utilizing style sheets in CSS.Performance goals are
+                    predominantly concerned with the render time, deploying the CSS, HTML, and JavaScript to guarantee
+                    that the website opens up rapidly. Front-end development, also denoted as ‘CSS frameworks,’ are
+                    packages comprising pre-written, homogenous code in folders and files.They offer you a ground to
+                    develop while still permitting flexibility with the final design.
+                </div>
+            </div>
+        </div>
+        <section id="cards">
+            <!-- When navigating to #cards <section>, the top part of Angular Logo gets covered by navbar. This div avoids that issue. -->
+            <div class="blankDivForNavbar"></div>
+            <hr>
+            <div class="container-fluid lead">
+                <div class="row">
+                    <!-- Display 1 card in 1 row for viewport width less than xsm breakpoint -->
+                    <!-- Display 2 cards in 1 row for viewport width greater than xsm breakpoint and below sm breakpoint -->
+                    <!-- Display 3 cards in 1 row for viewport width greater than sm breakpoint and less than lg breakpoint -->
+                    <!-- Display all the cards in 1 row for viewport width greater than lg breakpoint -->
+                    <div class="col-lg-2 col-sm-4 col-xsm-6 col-12 mx-auto my-3">
+                        <!-- Entire card div is clickable using anchor tag -->
+                        <a href="html/angular.html" class="cardAnchorTag">
+                            <!-- Card uses the full height of the div with h-100 -->
+                            <div class="card border-0 h-100 cardEffect">
+                                <img src="images/angular-logo.svg" alt="Angular Logo"
+                                    class="card-img-top img-fluid smLogoDisplay m-auto mt-3">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title fw-bold">Angular</h5>
+                                    <p class="card-text h6 fw-light my-3">The only of the many Front-end Frameworks in
+                                        2023 based on TypeScript, Angular makes its spot on this list. Angular was
+                                        initially
+                                    </p>
+                                    <!-- readMoreButton in css makes the read more button appear at the bottom of the card div column -->
+                                    <div class="btn btn-dark rounded-lg readMoreButton">Read more</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-sm-4 col-xsm-6 col-12 mx-auto my-3">
+                        <a href="html/emberjs.html" class="cardAnchorTag">
+                            <div class="card border-0 h-100 cardEffect">
+                                <img src="images/emberjs-logo.svg" alt="EmberJs Logo"
+                                    class="card-img-top img-fluid smLogoDisplay m-auto mt-3">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title fw-bold">EmberJs</h5>
+                                    <p class="card-text h6 fw-light my-3">With its component-based functionality and
+                                        two-way data binding, Ember resembles Angular a lot. It was developed in
+                                    </p>
+                                    <div class="btn btn-dark rounded-lg readMoreButton">Read more</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-sm-4 col-xsm-6 col-12 mx-auto my-3">
+                        <a href="html/jquery.html" class="cardAnchorTag">
+                            <div class="card border-0 h-100 cardEffect">
+                                <img src="images/jquery-logo.svg" alt="jQuery Logo"
+                                    class="card-img-top img-fluid smLogoDisplay m-auto mt-3">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title fw-bold">jQuery</h5>
+                                    <p class="card-text h6 fw-light my-3">Since its development in 2006, jQuery has been
+                                        around for quite some time now. Despite being an older Framework
+                                    </p>
+                                    <div class="btn btn-dark rounded-lg readMoreButton">Read more</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-sm-4 col-xsm-6 col-12 mx-auto my-3">
+                        <a href="html/react.html" class="cardAnchorTag">
+                            <div class="card border-0 h-100 cardEffect">
+                                <img src="images/react-logo.svg" alt="React Logo"
+                                    class="card-img-top img-fluid smLogoDisplay m-auto mt-3">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title fw-bold">React</h5>
+                                    <p class="card-text h6 fw-light my-3">Considering how easy it is to learn and how
+                                        much money a ReactJs Front-end developer makes, ReactJs could easily
+                                    </p>
+                                    <div class="btn btn-dark rounded-lg readMoreButton">Read more</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-sm-4 col-xsm-6 col-12 mx-auto my-3">
+                        <a href="html/vuejs.html" class="cardAnchorTag">
+                            <div class="card border-0 h-100 cardEffect">
+                                <img src="images/vuejs-logo.svg" alt="VueJs Logo"
+                                    class="card-img-top img-fluid smLogoDisplay m-auto mt-3">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title fw-bold">VueJs</h5>
+                                    <p class="card-text h6 fw-light my-3">The developers of VueJs have combined the
+                                        existing Front-end Frameworks’ best features to deploy a simple and
+                                        straightforward
+                                    </p>
+                                    <div class="btn btn-dark rounded-lg readMoreButton">Read more</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <footer class="container-fluid">
+            <p class="float-end"><a href="#" class="btn btn-dark rounded-lg">Back to top</a></p>
+            <p>&copy; 2023–2023 Top Five Frontend Frameworks, Inc.</p>
+        </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

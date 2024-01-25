@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Top Five Frontend Frameworks</title>
+    <link rel="icon" type="image/svg+xml" href="../images/home-logo.svg">
+    <!-- Custom bootstrap compiled by adding new Sass maps as follows: -->
+    <!-- Sass maps added: 
+        $grid-breakpoints (
+            xsm: 350px -> Added after xs and before other breakpoints
+        )
+        $container-max-widths (
+            xsm: 328px -> Added before other breakpoints
+        )
+     -->
+    <!-- This is done to have responsiveness in devices such as low resolution phones (less than xsm breakpoint) -->
+    <link href="../css/custom_bootstrap.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header data-bs-theme="dark">
+        <!-- Bootstrap navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid navBarProps">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../images/home-logo.svg" alt="Home Logo" class="img-fluid miniLogoDisplay">
+                </a>
+                <!-- Different title font sizes for different breakpoints  -->
+                <!-- Title not displayed for viewport width less than xsm breakpoint -->
+                <a class="navbar-brand titleFontLg titleColor d-none d-lg-inline me-auto" href="../index.html">Top Five
+                    Frontend Frameworks</a>
+                <a class="navbar-brand titleFontMd titleColor d-none d-md-inline d-lg-none me-auto"
+                    href="../index.html">Top Five Frontend Frameworks</a>
+                <a class="navbar-brand titleFontSm titleColor d-none d-sm-inline d-md-none me-auto"
+                    href="../index.html">Top Five Frontend Frameworks</a>
+                <a class="navbar-brand titleFontXsm titleColor d-none d-xsm-inline d-sm-none me-auto"
+                    href="../index.html">Top Five Frontend Frameworks</a>
+                <button class="navbar-toggler navButtonSize" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <!-- nav-item(s) margin at the start instead of end -->
+                    <!-- li(s) appears one by one from top to bottom animated and all li(s) move from -15px to 0px downwards -->
+                    <ul class="navbar-nav ms-auto navItemAnimation">
+                        <li class="nav-item">
+                            <a class="container-fluid navAnchorTag hoverColor p-0" href="../html/angular.html">
+                                <div class="d-flex align-items-center topMargin active">
+                                    <img src="../images/angular-logo.svg" class="img-fluid miniLogoDisplay d-xsm-inline d-md-none" alt="Angular Logo">
+                                    <p class="m-2">Angular</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="container-fluid navAnchorTag hoverColor p-0" href="../html/emberjs.html">
+                                <div class="d-flex align-items-center">
+                                    <img src="../images/emberjs-logo.svg" class="img-fluid miniLogoDisplay d-xsm-inline d-md-none" alt="EmberJs Logo">
+                                    <p class="m-2">EmberJs</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="container-fluid navAnchorTag hoverColor p-0" href="../html/jquery.html">
+                                <div class="d-flex align-items-center">
+                                    <img src="../images/jquery-logo.svg" class="img-fluid miniLogoDisplay d-xsm-inline d-md-none" alt="jQuery Logo">
+                                    <p class="m-2">jQuery</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="container-fluid navAnchorTag hoverColor p-0" href="../html/react.html">
+                                <div class="d-flex align-items-center">
+                                    <img src="../images/react-logo.svg" class="img-fluid miniLogoDisplay d-xsm-inline d-md-none" alt="React Logo">
+                                    <p class="m-2">React</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="container-fluid navAnchorTag hoverColor p-0" href="../html/vuejs.html">
+                                <div class="d-flex align-items-center bottomMargin">
+                                    <img src="../images/vuejs-logo.svg" class="img-fluid miniLogoDisplay d-xsm-inline d-md-none" alt="VueJs Logo">
+                                    <p class="m-2">VueJs</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="container-fluid navAnchorTag hoverColor p-0" href="../html/signup.html">
+                                <div class="d-flex align-items-center bottomMargin">
+                                    <p class="m-2 signUpSignInColor">Sign up</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="sign container-fluid navAnchorTag hoverColor p-0" href="../html/signin.html">
+                                <div class="d-flex align-items-center bottomMargin">
+                                    <p class="m-2 signUpSignInColor">Sign in</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <br>
+        <br>
+        <div class="container-fluid mt-5">
+            <div class="row">
+                <!-- Variable coloumn ratio for different widths of viewport -->
+                <div class="col-lg-3 col-md-4 col-sm-12 p-2">
+                    <!-- Logo size lg (inline element) for viewport width greater than md breakpoint -->
+                    <!-- Logo size sm (block element and center) for viewport width less than md breakpoint -->
+                    <img src="../images/angular-logo.svg" alt="Angular Logo"
+                        class="img-fluid lgLogoDisplay d-none d-md-inline mt-4 ms-3">
+                    <img src="../images/angular-logo.svg" alt="Angular Logo"
+                        class="img-fluid smLogoDisplay d-block d-md-none mx-auto">
+                </div>
+                <!-- Variable coloumn ratio for different widths of viewport -->
+                <div class="col-lg-9 col-md-8 col-sm-12 mt-4 lead">
+                    <h2 class="display-6 fw-bold">Angular</h2>
+                    <br>
+                    The only of the many Front-end Frameworks in 2023 based on TypeScript, Angular makes its spot on
+                    this list. Angular was initially released in the year 2010 by Google as AngularJs. The now known
+                    version of the Framework (Angular 2+) was developed and deployed in 2016, keeping in mind the need
+                    for improved technology to overcome the hurdles faced by the conventional Frameworks. Similar to
+                    ReactJs, it is an open-source platform used to develop user interfaces on the front end. Also read:-
+                    React vs Angular: Which Is A Better JavaScript Framework? The one main difference between React and
+                    Angular is that Angular has a two-way binding feature. The presence of this feature allows the
+                    integration of any changes made in the model with the view. This way, a developer would see what
+                    changes they are making in the application and how it looks in real-time. Angular usually deals with
+                    the development of mobile and web applications. Not just that, but one can easily build both single
+                    and multi-page web applications. Due to its various features, Angular is opted by some of the
+                    biggest companies in the world, including Microsoft Office, BMW, Forbes, Gmail, and Upwork. Although
+                    Angular has better features when compared to React, it is not easy to learn. The framework is a bit
+                    complex and thus takes time to excel at.
+                    <br>
+                    <br>
+                    <h4 class="fw-bold">Advantages</h4>
+                    The in-built functionality of this framework allows real-time model-view synchronization and makes
+                    it easier to make any changes to the application. The presence of Directives allows the developers
+                    to play around with the Document Object Model (DOM) and create rich content using HTML. Dependency
+                    injectors allow the developers to decouple interdependent components of code and reuse these
+                    components however they need. Angular gained popularity among the developers since it was launched.
+                    Today, there’s a big community of web developers who use Angular. A developer can easily seek help
+                    from this community if he faces an issue.
+                    <br>
+                    <br>
+                    <h4 class="fw-bold">Limitations</h4>
+                    The wide variety of features and built-in functionalities make Angular a very complex language to
+                    learn. Dynamic applications can lag sometimes and may not perform upto the mark.
+                    <br>
+                    <br>
+                    <h4 class="fw-bold">Applications</h4>
+                    Angular is the go-to option for most enterprise-based and dynamic web applications due to its
+                    two-way data binding that allows browser-based applications to augment.
+                    <br>
+                    <br>
+                    <h4 class="fw-bold">When not to use</h4>
+                    Angular is the complete dynamic solution as a Framework. Thus, if you want to build small-scale web
+                    applications, you may not want to opt for angular because you would not utilize its resources to the
+                    best. It would merely be a misuse of time and resources. Furthermore, if you are a new developer
+                    with a small team, you should avoid using the complex Frameworks like Angular.
+                </div>
+            </div>
+        </div>
+        <hr>
+        <footer class="container-fluid">
+            <p class="float-end"><a href="#" class="btn btn-dark rounded-lg">Back to top</a></p>
+            <p>&copy; 2023–2023 Top Five Frontend Frameworks, Inc.</p>
+        </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
