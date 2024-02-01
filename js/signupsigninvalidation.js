@@ -1,12 +1,17 @@
 function validateUsername() {
     let usernameError = document.getElementById('username-error');
     let username = document.getElementById('username');
+    let specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
     if (username.value.length == 0) {
         usernameError.innerHTML = 'Username cannot be blank';
         return false;
     }
     else if (username.value.includes(' ')) {
         usernameError.innerHTML = 'Username cannot contain spaces';
+        return false;
+    }
+    else if(username.value.match(specialChars)){
+        usernameError.innerHTML = 'Username cannot contain special characters';
         return false;
     }
     else if ((username.value.length < 8) || (username.value.length > 20)) {
