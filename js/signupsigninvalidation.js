@@ -51,7 +51,7 @@ function validateEmail() {
 function validatePassword() {
     let passwordError = document.getElementById('password-error');
     let password = document.getElementById('password');
-    let passwordConstraint = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/
+    let passwordConstraint = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]/
     if (password.value.includes(' ')) {
         passwordError.innerHTML = 'Password cannot contain spaces';
         return false;
@@ -60,12 +60,12 @@ function validatePassword() {
         passwordError.innerHTML = 'Password cannot be blank';
         return false;
     }
-    else if ((password.value.length < 8) || (password.value.length > 20)) {
-        passwordError.innerHTML = 'Password should be between 8 and 20 characters';
-        return false;
-    }
     else if (!password.value.match(passwordConstraint)) {
         passwordError.innerHTML = 'Password should contain at least one letter, one number and one special character';
+        return false;
+    }
+    else if ((password.value.length < 8) || (password.value.length > 20)) {
+        passwordError.innerHTML = 'Password should be between 8 and 20 characters';
         return false;
     }
     else {
