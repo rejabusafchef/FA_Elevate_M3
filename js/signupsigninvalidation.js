@@ -76,7 +76,9 @@ function validatePassword() {
 function validatePasswordRepeat() {
     let passwordRepeatError = document.getElementById('password-repeat-error');
     let passwordRepeat = document.getElementById('passwordrepeat');
-    if (password.value != passwordRepeat.value) {
+    let password = document.getElementById('password');
+    // Compare the typed passwordRepeat with substring of password. Check while password is being typed.
+    if ((password.value.substring(0,passwordRepeat.value.length)) != passwordRepeat.value) {
         passwordRepeatError.innerHTML = 'Passwords do not match';
         return false;
     }
