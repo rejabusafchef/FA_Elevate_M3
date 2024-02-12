@@ -19,7 +19,7 @@ let emailError = document.getElementById('email-error');
 let password = document.getElementById('password');
 let passwordError = document.getElementById('password-error');
 let passwordRepeat = document.getElementById('passwordrepeat');
-let passwordRepeatError = document.getElementById('password-repeat-error');
+let passwordRepeatError = document.getElementById('passwordrepeat-error');
 // Populate username input field with lastSignedUpUsername (sign in page)
 username.value = lastSignedUpUsername;
 function validateUsername() {
