@@ -1,15 +1,19 @@
 // Greeting message for the last signed up username
 let lastSignedUpUsername = localStorage.getItem('signedUpUsername');
+localStorage.removeItem('signedUpUsername');
 const greeting = (person) => {
     const name = person ? person : '';
     return `Welcome ${name}`;
 };
 let usernameDisplay = document.getElementById('greetingDisplay');
-usernameDisplay.innerHTML = greeting(lastSignedUpUsername);
-localStorage.removeItem('signedUpUsername');
+if (usernameDisplay) {
+    usernameDisplay.innerHTML = greeting(lastSignedUpUsername);
+}
+// Populate username input field with lastSignedUpUsername
+document.getElementById('username').value = lastSignedUpUsername;
 function validateUsername() {
-    let usernameError = document.getElementById('username-error');
     let username = document.getElementById('username');
+    let usernameError = document.getElementById('username-error');
     let lettersNumbers = /[^A-Za-z0-9]/;
     if (username.value.length == 0) {
         usernameError.innerHTML = 'Username cannot be blank';
