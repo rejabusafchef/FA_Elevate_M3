@@ -7,6 +7,7 @@ const greeting = (person) => {
     return `Welcome ${name}`;
 };
 let usernameDisplay = document.getElementById('greetingDisplay');
+// Execute only in sign in page
 if (usernameDisplay) {
     usernameDisplay.innerHTML = greeting(lastSignedUpUsername);
 }
