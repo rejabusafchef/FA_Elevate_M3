@@ -9,11 +9,18 @@ let usernameDisplay = document.getElementById('greetingDisplay');
 if (usernameDisplay) {
     usernameDisplay.innerHTML = greeting(lastSignedUpUsername);
 }
-// Populate username input field with lastSignedUpUsername
-document.getElementById('username').value = lastSignedUpUsername;
+// Defining the following as global variables
+let username = document.getElementById('username');
+let usernameError = document.getElementById('username-error');
+let email = document.getElementById('email');
+let emailError = document.getElementById('email-error');
+let password = document.getElementById('password');
+let passwordError = document.getElementById('password-error');
+let passwordRepeat = document.getElementById('passwordrepeat');
+let passwordRepeatError = document.getElementById('password-repeat-error');
+// Populate username input field with lastSignedUpUsername (sign in page)
+username.value = lastSignedUpUsername;
 function validateUsername() {
-    let username = document.getElementById('username');
-    let usernameError = document.getElementById('username-error');
     let lettersNumbers = /[^A-Za-z0-9]/;
     if (username.value.length == 0) {
         usernameError.innerHTML = 'Username cannot be blank';
@@ -37,8 +44,6 @@ function validateUsername() {
     }
 }
 function validateEmail() {
-    let emailError = document.getElementById('email-error');
-    let email = document.getElementById('email');
     let emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     if (email.value.length == 0) {
         emailError.innerHTML = 'Email address cannot be blank';
@@ -62,8 +67,6 @@ function validateEmail() {
     }
 }
 function validatePassword() {
-    let passwordError = document.getElementById('password-error');
-    let password = document.getElementById('password');
     let passwordConstraint = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]/
     if (password.value.includes(' ')) {
         passwordError.innerHTML = 'Password cannot contain spaces';
@@ -87,8 +90,6 @@ function validatePassword() {
     }
 }
 function validatePasswordRepeat() {
-    let passwordRepeatError = document.getElementById('password-repeat-error');
-    let passwordRepeat = document.getElementById('passwordrepeat');
     if (password.value != passwordRepeat.value) {
         // Compare the passwords live while typing each character in the repeat password input field
         if ((password.value.substring(0, passwordRepeat.value.length)) != passwordRepeat.value) {
@@ -106,12 +107,8 @@ function validatePasswordRepeat() {
 }
 function validateSignUpForm() {
     // To display error in the case when correct password is typed partially in the repeat password input field and sign up is clicked
-    let passwordSignUp = document.getElementById('password');
-    let passwordRepeatSignUp = document.getElementById('passwordrepeat');
-    let passwordRepeatErrorSignUp = document.getElementById('password-repeat-error');
-    let usernameSignUp = document.getElementById('username');
-    if (passwordSignUp.value != passwordRepeatSignUp.value) {
-        passwordRepeatErrorSignUp.innerHTML = 'Passwords do not match';
+    if (password.value != passwordRepeat.value) {
+        passwordRepeatError.innerHTML = 'Passwords do not match';
         return false;
     }
     if (!validateUsername() || !validateEmail() || !validatePassword() || !validatePasswordRepeat()) {
@@ -119,7 +116,7 @@ function validateSignUpForm() {
     }
     else {
         // To display username after redirection to sign in page
-        localStorage.setItem('signedUpUsername', usernameSignUp.value);
+        localStorage.setItem('signedUpUsername', username.value);
         return true;
     }
 }
