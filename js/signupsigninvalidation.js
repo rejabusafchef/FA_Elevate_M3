@@ -6,7 +6,6 @@ const greeting = (person) => {
     const name = person ? person : '';
     return `Welcome ${name}`;
 };
-let usernameDisplay = document.getElementById('greeting-display');
 // Defining the following as global variables
 let username = document.getElementById('username');
 let usernameError = document.getElementById('username-error');
@@ -16,6 +15,7 @@ let password = document.getElementById('password');
 let passwordError = document.getElementById('password-error');
 let passwordRepeat = document.getElementById('passwordrepeat');
 let passwordRepeatError = document.getElementById('passwordrepeat-error');
+let usernameDisplay = document.getElementById('greeting-display');
 // Populate username input field with lastSignedUpUsername
 // Execute only in sign in page
 if (usernameDisplay) {
