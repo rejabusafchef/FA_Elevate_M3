@@ -77,7 +77,13 @@ function validatePasswordRepeat() {
     let passwordRepeatError = document.getElementById('password-repeat-error');
     let passwordRepeat = document.getElementById('passwordrepeat');
     if (password.value != passwordRepeat.value) {
-        passwordRepeatError.innerHTML = 'Passwords do not match';
+        // Compare the passwords live while typing each character in the repeat password input field
+        if ((password.value.substring(0,passwordRepeat.value.length)) != passwordRepeat.value) {
+            passwordRepeatError.innerHTML = 'Passwords do not match';
+        }
+        else {
+            passwordRepeatError.innerHTML = '';
+        }
         return false;
     }
     else {
@@ -86,6 +92,13 @@ function validatePasswordRepeat() {
     }
 }
 function validateSignUpForm() {
+    let passwordSignUp = document.getElementById('password');
+    let passwordRepeatSignUp = document.getElementById('passwordrepeat');
+    let passwordRepeatErrorSignUp = document.getElementById('password-repeat-error');
+    if (passwordSignUp.value != passwordRepeatSignUp.value) {
+        passwordRepeatErrorSignUp.innerHTML = 'Passwords do not match';
+        return false;
+    }
     if (!validateUsername() || !validateEmail() || !validatePassword() || !validatePasswordRepeat()) {
         return false;
     }
