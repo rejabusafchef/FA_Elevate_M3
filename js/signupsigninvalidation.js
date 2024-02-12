@@ -1,3 +1,12 @@
+// Greeting message for the last signed up username
+let lastSignedUpUsername = localStorage.getItem('signedUpUsername');
+const greeting = (person) => {
+    const name = person ? person : '';
+    return `Welcome ${name}`;
+};
+let usernameDisplay = document.getElementById('greetingDisplay');
+usernameDisplay.innerHTML = greeting(lastSignedUpUsername);
+localStorage.removeItem('signedUpUsername');
 function validateUsername() {
     let usernameError = document.getElementById('username-error');
     let username = document.getElementById('username');
@@ -10,7 +19,7 @@ function validateUsername() {
         usernameError.innerHTML = 'Username cannot contain spaces';
         return false;
     }
-    else if(username.value.match(lettersNumbers)){
+    else if (username.value.match(lettersNumbers)) {
         usernameError.innerHTML = 'Username cannot contain special characters';
         return false;
     }
@@ -35,7 +44,7 @@ function validateEmail() {
         emailError.innerHTML = 'Email address cannot contain spaces';
         return false;
     }
-    else if(!email.value.match(emailRegex)){
+    else if (!email.value.match(emailRegex)) {
         emailError.innerHTML = 'Email address is not valid';
         return false;
     }
@@ -78,7 +87,7 @@ function validatePasswordRepeat() {
     let passwordRepeat = document.getElementById('passwordrepeat');
     if (password.value != passwordRepeat.value) {
         // Compare the passwords live while typing each character in the repeat password input field
-        if ((password.value.substring(0,passwordRepeat.value.length)) != passwordRepeat.value) {
+        if ((password.value.substring(0, passwordRepeat.value.length)) != passwordRepeat.value) {
             passwordRepeatError.innerHTML = 'Passwords do not match';
         }
         else {
@@ -96,6 +105,7 @@ function validateSignUpForm() {
     let passwordSignUp = document.getElementById('password');
     let passwordRepeatSignUp = document.getElementById('passwordrepeat');
     let passwordRepeatErrorSignUp = document.getElementById('password-repeat-error');
+    let usernameSignUp = document.getElementById('username');
     if (passwordSignUp.value != passwordRepeatSignUp.value) {
         passwordRepeatErrorSignUp.innerHTML = 'Passwords do not match';
         return false;
@@ -104,6 +114,8 @@ function validateSignUpForm() {
         return false;
     }
     else {
+        // To display username after redirection to sign in page
+        localStorage.setItem('signedUpUsername', usernameSignUp.value);
         return true;
     }
 }
