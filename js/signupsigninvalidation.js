@@ -1,6 +1,6 @@
 // Greeting message for the last signed up username
 let lastSignedUpUsername = localStorage.getItem('signedUpUsername');
-// Remove localStorage item if page refreshed
+// Remove localStorage item if sign in page refreshed
 localStorage.removeItem('signedUpUsername');
 const greeting = (person) => {
     const name = person ? person : '';
