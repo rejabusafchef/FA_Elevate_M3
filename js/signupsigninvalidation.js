@@ -101,7 +101,7 @@ function validatePasswordRepeat() {
     }
 }
 function validateSignUpForm() {
-    // To display error in the case of correct password typed partially in the repeat password input field and sign up is clicked
+    // To display error in the case when correct password is typed partially in the repeat password input field and sign up is clicked
     let passwordSignUp = document.getElementById('password');
     let passwordRepeatSignUp = document.getElementById('passwordrepeat');
     let passwordRepeatErrorSignUp = document.getElementById('password-repeat-error');
