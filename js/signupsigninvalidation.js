@@ -6,11 +6,7 @@ const greeting = (person) => {
     const name = person ? person : '';
     return `Welcome ${name}`;
 };
-let usernameDisplay = document.getElementById('greetingDisplay');
-// Execute only in sign in page
-if (usernameDisplay) {
-    usernameDisplay.innerHTML = greeting(lastSignedUpUsername);
-}
+let usernameDisplay = document.getElementById('greeting-display');
 // Defining the following as global variables
 let username = document.getElementById('username');
 let usernameError = document.getElementById('username-error');
@@ -20,8 +16,12 @@ let password = document.getElementById('password');
 let passwordError = document.getElementById('password-error');
 let passwordRepeat = document.getElementById('passwordrepeat');
 let passwordRepeatError = document.getElementById('passwordrepeat-error');
-// Populate username input field with lastSignedUpUsername (sign in page)
-username.value = lastSignedUpUsername;
+// Populate username input field with lastSignedUpUsername
+// Execute only in sign in page
+if (usernameDisplay) {
+    usernameDisplay.innerHTML = greeting(lastSignedUpUsername);
+    username.value = lastSignedUpUsername;
+}
 function validateUsername() {
     let lettersNumbers = /[^A-Za-z0-9]/;
     if (username.value.length == 0) {
