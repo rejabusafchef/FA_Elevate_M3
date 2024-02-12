@@ -92,6 +92,7 @@ function validatePasswordRepeat() {
     }
 }
 function validateSignUpForm() {
+    // To display error in the case of correct password typed partially in repeat password input field
     let passwordSignUp = document.getElementById('password');
     let passwordRepeatSignUp = document.getElementById('passwordrepeat');
     let passwordRepeatErrorSignUp = document.getElementById('password-repeat-error');
