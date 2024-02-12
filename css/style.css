@@ -194,3 +194,7 @@
     color: brown;
     font-size: medium;
 }
+
+#greetingDisplay {
+    color: blue;
+}
