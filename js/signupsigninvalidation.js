@@ -22,6 +22,15 @@ if (usernameDisplay) {
     usernameDisplay.innerHTML = greeting(lastSignedUpUsername);
     username.value = lastSignedUpUsername;
 }
+// Focus the right input field on page load
+window.onload = function(){
+    if (!lastSignedUpUsername) {
+        username.focus();
+    }
+    else {
+        password.focus();
+    }
+}
 function validateUsername() {
     let lettersNumbers = /[^A-Za-z0-9]/;
     if (username.value.length == 0) {
