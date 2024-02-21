@@ -22,7 +22,7 @@ if (usernameDisplay) {
     usernameDisplay.innerHTML = greeting(lastSignedUpUsername);
     username.value = lastSignedUpUsername;
 }
-// Focus the right input field on page load
+// Focus to the correct input field on page load
 window.onload = function(){
     if (!lastSignedUpUsername) {
         username.focus();
